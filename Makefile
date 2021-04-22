@@ -9,7 +9,7 @@ all: clean mainP main.o calcsum.o
 mainP: calcsum.o main.o
 	@echo "Final Compile"
 	#sleep 1
-	${CC} main.o calcsum.o -o $@
+	${CC} main.o calcsum.o -lpthread -o $@
 main.o:
 	@echo "Compiling Main object"
 	#sleep 1

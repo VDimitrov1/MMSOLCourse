@@ -1,6 +1,7 @@
 #include "user.h"
-
-int calc_sum(int a,int b)
+#include <pthread.h>
+void *calc_sum(void* Message)
 {
-	return a+b;
+	((msg*) Message)->result=((msg*) Message)->Num1+((msg*) Message)-> Num2;
+	pthread_exit((void *) Message);
 }
