@@ -4,19 +4,15 @@ CC= gcc
 
 $? #Special command for exiting if error found
 
-all: clean mainP main.o calcsum.o
+all: clean mainP main.o
 
-mainP: calcsum.o main.o
+mainP:  main.o
 	@echo "Final Compile"
 	#sleep 1
-	${CC} main.o calcsum.o -lpthread -o $@
+	${CC} main.o -lpthread -o $@
 main.o:
 	@echo "Compiling Main object"
 	#sleep 1
 	 ${CC} -O1 -Wall -Wextra -c main.c -o $@
-calcsum.o: 
-	@echo "Compiling Calcsum Lib"
-	#sleep 1
-	${CC} -O1 -Wall -Wextra -c calcsum.c -o $@
 clean: 
-	rm -f main.o calcsum.o
+	rm -f main.o 

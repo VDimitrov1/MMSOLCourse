@@ -1,0 +1,24 @@
+++ChangeLog
+Version: 3.0
+Date: 01.05.2021
+Modifier:VDimitrov
+
+Description: Added a seprate child process, that calls the calculated bc. Its
+input and output are redirected and go to the parent process. 
+When data is entered from the keyboard (numbers only) the parent adds a 
+new line at the end and sends it to child. The calculation is printed at the
+standart output.
+
+
+Version:2.0
+Date: 22.04.2021
+Modifier:VDimitrov
+
+Description: Revised the code adding the pthreads library, when calling calcsum>
+
+Version: 1.0
+Date: 15.04.2021
+Author: VDimitrov
+
+Desciption: A simple program, that takes two numbers from the command line and >
+
